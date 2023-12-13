@@ -1,0 +1,63 @@
+<style>
+  /* Add this style block within the head of your HTML or in a separate CSS file */
+  .navbar-nav .nav-link:hover {
+    background-color: #58B3FF;
+  }
+</style>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <!-- Left side with logo -->
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo.png" alt="Logo" style="height: 50px;">
+    </a>
+
+    <!-- Centered search zone with icons for search and filter -->
+    <form class="form-inline mx-auto">
+      <div class="input-group" style="border-radius: 20px; overflow: hidden;">
+        <input type="text" class="form-control" placeholder="Search" style="border-radius: 20px;">
+        <div class="input-group-append">
+          <button class="btn btn-outline-light" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="btn btn-outline-light" type="button" data-toggle="dropdown">
+            <i class="bi bi-filter"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Category 1</a>
+            <a class="dropdown-item" href="#">Category 2</a>
+            <a class="dropdown-item" href="#">Category 3</a>
+            <!-- Add more categories as needed -->
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right side with links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="#" style="font-size: 18px;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 18px;">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 18px;">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 18px;">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 18px;">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+<router-outlet>
+
+</router-outlet>
