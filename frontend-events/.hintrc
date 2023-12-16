@@ -9,6 +9,7 @@
       {
         "select-name": "off"
       }
-    ]
+    ],
+    "axe/text-alternatives": "off"
   }
 }

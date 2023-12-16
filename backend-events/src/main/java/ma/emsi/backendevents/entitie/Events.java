@@ -24,4 +24,6 @@ public class Events {
     private String eventPlace;
     @Temporal(TemporalType.DATE)
     private Date eventDate;
+    private double eventPrice;
+    private String imgUrl;
 }

@@ -1,2 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'bootstrap-icons/font/bootstrap-icons.css';
+/* styles.css */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/* Add your global styles here */
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Angular Animations */
+.navbar-brand img {
+  transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.2);
+}
+
+.navbar-nav .nav-link {
+  transition: background-color 0.3s;
+}
+
+
+.navbar-nav .nav-link:hover {
+  background-color: #58B3FF;
+}
+
+.form-inline input {
+  transition: border-color 0.3s;
+}
+
+.form-inline input:focus {
+  border-color: #58B3FF;
+}
+

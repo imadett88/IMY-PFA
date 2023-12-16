@@ -1,63 +1,43 @@
-<style>
-  /* Add this style block within the head of your HTML or in a separate CSS file */
-  .navbar-nav .nav-link:hover {
-    background-color: #58B3FF;
-  }
-</style>
+<!-- Import Bootstrap CSS in your styles.css -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <!-- Left side with logo -->
-    <a class="navbar-brand" href="#">
-      <img src="../assets/logo.png" alt="Logo" style="height: 50px;">
-    </a>
+<!-- navbar.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">
+    <img src="../assets/logo.png" alt="Logo" style="height: 50px;">
+  </a>
 
-    <!-- Centered search zone with icons for search and filter -->
-    <form class="form-inline mx-auto">
-      <div class="input-group" style="border-radius: 20px; overflow: hidden;">
-        <input type="text" class="form-control" placeholder="Search" style="border-radius: 20px;">
-        <div class="input-group-append">
-          <button class="btn btn-outline-light" type="button">
-            <i class="bi bi-search"></i>
-          </button>
-          <button class="btn btn-outline-light" type="button" data-toggle="dropdown">
-            <i class="bi bi-filter"></i>
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Category 1</a>
-            <a class="dropdown-item" href="#">Category 2</a>
-            <a class="dropdown-item" href="#">Category 3</a>
-            <!-- Add more categories as needed -->
-          </div>
-        </div>
-      </div>
-    </form>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Right side with links -->
-    <ul class="navbar-nav ml-auto">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link active" href="#" style="font-size: 18px;">Home</a>
+        <a class="nav-link" routerLink="/home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="events" style="font-size: 18px;">Events</a>
+        <a class="nav-link" routerLink="/events">Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="font-size: 18px;">Services</a>
+        <a class="nav-link" href="#">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="font-size: 18px;">About</a>
+        <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="font-size: 18px;">Contact</a>
+        <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+         <i class="bi bi-search"></i>
+      </button> -->
+    </form>
   </div>
 </nav>
 
-
-
-
-
-<router-outlet>
-
-</router-outlet>
+<router-outlet></router-outlet>

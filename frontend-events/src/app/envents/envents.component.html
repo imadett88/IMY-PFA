@@ -88,13 +88,14 @@
       <div class="card-header">
         <h3>{{ event.eventName }}</h3>
       </div>
-      <img class="card-img-top" src="{{ event.imageUrl }}" alt="{{ event.eventName }}">
+      <img class="card-img-top" [src]="event.imgUrl" alt="{{ event.eventName }}">
       <div class="card-body">
-        <p><strong>Event ID:</strong> {{ event.eventId }}</p>
-        <p><strong>Event Category:</strong> {{ event.eventCategory }}</p>
-        <p><strong>Event City:</strong> {{ event.eventCity }}</p>
-        <p><strong>Event Place:</strong> {{ event.eventPlace }}</p>
-        <p><strong>Event Date:</strong> {{ event.eventDate | date:'yyyy-MM-dd' }}</p>
+        <!-- <p><strong>Event ID:</strong> {{ event.eventId }}</p> -->
+        <p><strong>Category:</strong> {{ event.eventCategory }}</p>
+        <p><strong>City:</strong> {{ event.eventCity }}</p>
+        <p><strong>Place:</strong> {{ event.eventPlace }}</p>
+        <p><strong>Date:</strong> {{ event.eventDate | date:'yyyy-MM-dd' }}</p>
+        <p><strong>Price:</strong> {{ event.eventPrice }} MAD</p>
       </div>
     </div>
   </div>

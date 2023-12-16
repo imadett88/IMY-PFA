@@ -24,9 +24,9 @@ public class BackendEventsApplication {
 		return args -> {
 			eventsRepository.saveAll(
 					List.of(
-							Events.builder().eventName("WAC vs RCA").eventCategory(EventCategory.SPORT).eventCity("Casablanca").eventPlace("Complexe Sportif Mohammed V").eventDate(Date.valueOf("2023-12-11")).build(),
-							Events.builder().eventName("Les Inqualifiables").eventCategory(EventCategory.THEATER).eventCity("Tanger").eventPlace("Complexe Hassan 2").eventDate(Date.valueOf("2023-11-11")).build(),
-							Events.builder().eventName("GREEN CARD").eventCategory(EventCategory.CINEMA).eventCity("Casablanca").eventPlace("IMAX Morocco Mall").eventDate(Date.valueOf("2023-10-21")).build()
+							Events.builder().eventName("WAC vs RCA").eventCategory(EventCategory.SPORT).eventCity("Casablanca").eventPlace("Complexe Sportif Mohammed V").eventDate(Date.valueOf("2023-12-11")).eventPrice(300).imgUrl("/images/sprt.jpg").build(),
+							Events.builder().eventName("Alaadin").eventCategory(EventCategory.THEATER).eventCity("Tanger").eventPlace("Complexe Hassan 2").eventDate(Date.valueOf("2023-11-11")).eventPrice(300).imgUrl("/images/aldn.jpg").build(),
+							Events.builder().eventName("John Wick").eventCategory(EventCategory.CINEMA).eventCity("Casablanca").eventPlace("IMAX Morocco Mall").eventDate(Date.valueOf("2023-10-21")).eventPrice(300).imgUrl("/images/jnwk.jpg").build()
 					)
 			);
 			eventsRepository.findAll().forEach(e->{
