@@ -25,5 +25,10 @@ public class Events {
     @Temporal(TemporalType.DATE)
     private Date eventDate;
     private double eventPrice;
+    @Lob
+    @Column(length = 50000)
+    private String eventDetails;
+    @Lob
+    @Column(length = 50000)
     private String imgUrl;
 }

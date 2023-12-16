@@ -1,102 +1,38 @@
-<!-- <h2>Event List</h2>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./envents.component.css">
+</head>
 
-<table>
-  <thead>
-    <tr>
-      <th>Event ID</th>
-      <th>Event Name</th>
-      <th>Event Category</th>
-      <th>Event City</th>
-      <th>Event Place</th>
-      <th>Event Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let event of events">
-      <td>{{ event.enventId }}</td>
-      <td>{{ event.eventName }}</td>
-      <td>{{ event.eventCategory }}</td>
-      <td>{{ event.eventCity }}</td>
-      <td>{{ event.eventPlace }}</td>
-      <td>{{ event.eventDate | date:'yyyy-MM-dd' }}</td>
-    </tr>
-  </tbody>
-</table> -->
+<div class="container">
+  <div class="item-container" *ngFor="let event of events">
+    <div class="img-container">
+      <img [src]="event.imgUrl" alt="Event image">
+    </div>
 
-<!-- Assuming 'events' is an array of event objects from your backend -->
+    <div class="body-container">
+      <div class="overlay"></div>
 
-<style>
-  .card-container {
-    max-width: 800px;
-    margin: 20px auto;
-    overflow-x: hidden;
-    /* Hide horizontal scrollbar */
-  }
+      <div class="event-info">
+        <p class="title">{{ event.eventName }}</p>
+        <div class="separator"></div>
+        <p class="info">{{ event.eventCity }}</p>
+        <p class="price">{{ event.eventPrice }} MAD</p>
 
-  .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* Increased gap between cards */
-  }
+        <div class="additional-info">
+          <p class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ event.eventPlace }}
+          </p>
+          <p class="info">
+            <i class="far fa-calendar-alt"></i>
+            {{ event.eventDate }}
+          </p>
 
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    /* Slightly larger border radius */
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    width: calc(33.33% - 20px);
-    /* 33.33% width with increased gap */
-    margin-bottom: 20px;
-    /* Increased margin as needed */
-  }
-
-  .card:hover {
-    transform: scale(1.05);
-  }
-
-  .card-img-top {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* Ensure the image covers the entire container */
-    border-bottom: 1px solid #ccc;
-    /* Border at the bottom of the image */
-  }
-
-  .card-header {
-    background-color: #58B3FF;
-    color: #fff;
-    padding: 12px;
-    /* Slightly larger padding */
-    text-align: center;
-  }
-
-  .card-body {
-    padding: 20px;
-  }
-
-  /* Add more styling as needed */
-</style>
-
-<div class="card-container">
-  <h2>Event List</h2>
-  <div class="card-list">
-    <div class="card" *ngFor="let event of events">
-      <div class="card-header">
-        <h3>{{ event.eventName }}</h3>
+          <p class="info description">
+            {{ event.eventDetails }}
+          </p>
+        </div>
       </div>
-      <img class="card-img-top" [src]="event.imgUrl" alt="{{ event.eventName }}">
-      <div class="card-body">
-        <!-- <p><strong>Event ID:</strong> {{ event.eventId }}</p> -->
-        <p><strong>Category:</strong> {{ event.eventCategory }}</p>
-        <p><strong>City:</strong> {{ event.eventCity }}</p>
-        <p><strong>Place:</strong> {{ event.eventPlace }}</p>
-        <p><strong>Date:</strong> {{ event.eventDate | date:'yyyy-MM-dd' }}</p>
-        <p><strong>Price:</strong> {{ event.eventPrice }} MAD</p>
-      </div>
+      <button class="action">J'achète</button>
     </div>
   </div>
-</div>
