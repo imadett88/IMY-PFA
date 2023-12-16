@@ -1,8 +1,11 @@
 package ma.emsi.backendevents;
 
 import ma.emsi.backendevents.entitie.Events;
+import ma.emsi.backendevents.entitie.User;
 import ma.emsi.backendevents.enums.EventCategory;
+import ma.emsi.backendevents.enums.UserRole;
 import ma.emsi.backendevents.repository.EventsRepository;
+import ma.emsi.backendevents.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,6 +34,21 @@ public class BackendEventsApplication {
 			);
 			eventsRepository.findAll().forEach(e->{
 				System.out.println(e.getEventName());
+			});
+		};
+	}
+
+	//@Bean
+	CommandLineRunner cm(UserRepository userRepository){
+		return args -> {
+			userRepository.saveAll(
+					List.of(
+							User.builder().fullName("Imad Ettamen").email("imad@adm.com").password("1234").role(UserRole.ADMIN).build(),
+							User.builder().fullName("Mohamed Sadrafe").email("med@adm.com").password("1111").role(UserRole.USER).build()
+					)
+			);
+			userRepository.findAll().forEach(u->{
+				System.out.println(u.getFullName());
 			});
 		};
 	}

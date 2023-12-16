@@ -10,6 +10,8 @@ export class EnventsComponent implements OnInit{
 
   events: any[] = [];
 
+
+
   constructor(private eventService:EventService){}
 
 
