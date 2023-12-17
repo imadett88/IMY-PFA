@@ -3,36 +3,39 @@
   <link rel="stylesheet" href="./envents.component.css">
 </head>
 
-<div class="container">
-  <div class="item-container" *ngFor="let event of events">
-    <div class="img-container">
-      <img [src]="event.imgUrl" alt="Event image">
-    </div>
-
-    <div class="body-container">
-      <div class="overlay"></div>
-
-      <div class="event-info">
-        <p class="title">{{ event.eventName }}</p>
-        <div class="separator"></div>
-        <p class="info">{{ event.eventCity }}</p>
-        <p class="price">{{ event.eventPrice }} MAD</p>
-
-        <div class="additional-info">
-          <p class="info">
-            <i class="fas fa-map-marker-alt"></i>
-            {{ event.eventPlace }}
-          </p>
-          <p class="info">
-            <i class="far fa-calendar-alt"></i>
-            {{ event.eventDate }}
-          </p>
-
-          <p class="info description">
-            {{ event.eventDetails }}
-          </p>
-        </div>
+<body>
+  <div class="container">
+    <div class="item-container" *ngFor="let event of events">
+      <div class="img-container">
+        <img [src]="event.imgUrl" alt="Event image">
       </div>
-      <button class="action">J'achète</button>
+
+      <div class="body-container">
+        <div class="overlay"></div>
+
+        <div class="event-info">
+          <p class="title">{{ event.eventName }}</p>
+          <div class="separator"></div>
+          <p class="info">{{ event.eventCity }}</p>
+          <p class="price">{{ event.eventPrice }} MAD</p>
+
+          <div class="additional-info">
+            <p class="info">
+              <i class="fas fa-map-marker-alt"></i>
+              {{ event.eventPlace }}
+            </p>
+            <p class="info">
+              <i class="far fa-calendar-alt"></i>
+              {{ event.eventDate }}
+            </p>
+
+            <p class="info description">
+              {{ event.eventDetails }}
+            </p>
+          </div>
+        </div>
+        <button class="action">J'achète</button>
+      </div>
     </div>
   </div>
+</body>

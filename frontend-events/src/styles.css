@@ -1,14 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles.css */
 @import '~bootstrap/dist/css/bootstrap.css';
 
-/* Add your global styles here */
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Angular Animations */
 .navbar-brand img {
   transition: transform 0.3s;
 }

@@ -1,5 +1,9 @@
-<!-- Import Bootstrap CSS in your styles.css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
 
 <!-- navbar.component.html -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -15,16 +19,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/home">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/events">Events</a>
+        <a class="nav-link" routerLink="/events">Événements</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
+        <a class="nav-link" routerLink="about">À Propos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="contact">Contact</a>
@@ -32,11 +36,16 @@
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-         <i class="bi bi-search"></i>
-      </button> -->
+      <div class="position-relative">
+        <input class="form-control mr-sm-2 pl-4" type="text" placeholder="Search" aria-label="Search">
+        <i class="fas fa-search position-absolute"
+          style="left: 5px; top: 50%; transform: translateY(-50%); color: grey;"></i>
+      </div>
     </form>
+
+
+
+
   </div>
 </nav>
 

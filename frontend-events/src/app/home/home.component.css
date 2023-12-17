@@ -1,5 +1,3 @@
-/* home.component.css */
-
 #slider {
   position: relative;
   width: 100vw;
@@ -7,8 +5,6 @@
   overflow: hidden;
 }
 
-
-/* Add these styles to your existing CSS */
 
 .title-word {
   animation: color-animation 4s linear infinite;
@@ -46,7 +42,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.7; /* Set your desired opacity value */
+  opacity: 0.7 ;
 }
 
 .slider-inner {
@@ -73,13 +69,13 @@
 
 .pagination {
   position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  top: 42%;
+  left: 97%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
   z-index: 6;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start; /* Align to the left */
 }
 
 .pagination button {
@@ -93,7 +89,7 @@
   background-color: #fff;
   border-radius: 100%;
   padding: 0;
-  margin: 8px 0;
+  margin: 10px 0;
   cursor: pointer;
   position: relative;
   opacity: 0.2;
@@ -144,7 +140,7 @@
   color: #fff;
   font-weight: 600;
   transition: 0.5s;
-  margin-bottom: 20px; /* Adjust margin as needed */
+  margin-bottom: 20px;
 }
 
 .content h1:hover {
@@ -164,4 +160,48 @@
 }
 .no-scroll {
   overflow: hidden;
+}
+
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #3b5463;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #2f4450;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #2f4450;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #3b5463;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
 }

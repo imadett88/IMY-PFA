@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angu
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  constructor(private renderer: Renderer2, private el: ElementRef, private router: Router) {}
 
   @ViewChild('videosContainer') videosContainer!: ElementRef;
 
@@ -22,8 +25,6 @@ export class HomeComponent {
   }
 
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-
   ngOnInit(): void {
     // Add the 'no-scroll' class to the body element when the component is initialized
     this.renderer.addClass(document.body, 'no-scroll');
@@ -32,6 +33,10 @@ export class HomeComponent {
   ngOnDestroy(): void {
     // Remove the 'no-scroll' class from the body element when the component is destroyed
     this.renderer.removeClass(document.body, 'no-scroll');
+  }
+
+  onTrouverClick() {
+    this.router.navigate(['/events']); // Replace '/events' with your actual route
   }
 
 
@@ -56,12 +61,5 @@ export class HomeComponent {
       this.selectedVideoIndex = index;
     }
   }
-
-
-
-
-
-
-
 
 }
