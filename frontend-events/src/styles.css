@@ -34,3 +34,7 @@ body {
   border-color: #58B3FF;
 }
 
+.no-scroll {
+  overflow: hidden !important;
+}
+

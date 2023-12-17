@@ -1,40 +1,158 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/* home.component.css */
+
+#slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.hero{
+
+/* Add these styles to your existing CSS */
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #212529;
+  --color-2: #3D8DAE;
+  --color-3: #010101;
+}
+
+.title-word-2 {
+  --color-1: #193043;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 119, 255, 0.3),rgba(0, 90, 247, 0.3));
-  position: relative;
-  padding: 0 5%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7; /* Set your desired opacity value */
+}
+
+.slider-inner {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+}
+
+#slider-content {
+  padding: 20px;
+}
+
+#slide-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#slide-status {
+  font-size: 1.2em;
+}
+
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 6;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.pagination button {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 0;
+  margin: 8px 0;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+  outline: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.active {
+    opacity: 1;
+
+    &:before {
+      width: 300%;
+      height: 300%;
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out;
+  }
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  height: 100%;
 }
 
-.content{
-  text-align: center;
-
-}
-
-.content h1{
+.content h1 {
   font-size: 120px;
   color: #fff;
   font-weight: 600;
   transition: 0.5s;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.content h1:hover{
--webkit-text-stroke: 2px #fff;
-color: transparent;
+.content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 
-.content a{
+.content a {
   text-decoration: none;
   display: inline-block;
   color: #fff;
@@ -44,24 +162,6 @@ color: transparent;
   border-radius: 50px;
   margin-top: 20px;
 }
-
-.back-video{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-@media (min-aspect-ratio: 16/9){
-  .back-video{
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9){
-  .back-video{
-    width: auto;
-    height: 100%;
-  }
+.no-scroll {
+  overflow: hidden;
 }
