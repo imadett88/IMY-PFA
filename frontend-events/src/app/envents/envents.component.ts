@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-envents',
@@ -10,10 +11,12 @@ export class EnventsComponent implements OnInit{
 
   events: any[] = [];
 
+  constructor(private eventService:EventService, private router:Router){}
 
 
-  constructor(private eventService:EventService){}
-
+  navigateToPayment() {
+    this.router.navigate(['/payment']);
+  }
 
   ngOnInit(): void {
     console.log('Component initialized');
@@ -28,9 +31,5 @@ export class EnventsComponent implements OnInit{
       }
     )
   }
-
-
-
-
 
 }
