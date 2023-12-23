@@ -9,22 +9,33 @@ import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   {
-    path:"events", component: EnventsComponent
+    path: '',  // Empty path represents the default route
+    redirectTo: '/home',  // Redirect to the home page
+    pathMatch: 'full'
   },
   {
-    path:"home", component: HomeComponent
+    path: 'events',
+    component: EnventsComponent
   },
   {
-    path:"about", component: AboutComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-    path:"contact", component: ContactComponent
+    path: 'about',
+    component: AboutComponent
   },
   {
-    path:"payment", component: PaymentComponent
+    path: 'contact',
+    component: ContactComponent
   },
   {
-    path: "services", component: ServicesComponent
+    path: 'payment',
+    component: PaymentComponent
+  },
+  {
+    path: 'services',
+    component: ServicesComponent
   }
 ];
 
