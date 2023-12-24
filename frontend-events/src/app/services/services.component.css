@@ -19,6 +19,7 @@
   margin: 25px;
   opacity: 0;
   animation: fadeIn 1.5s ease-out infinite alternate;
+  color: #4078c0;
 }
 
 @keyframes fadeIn {
