@@ -1,5 +1,7 @@
+// app.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,29 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'frontend-events';
+  showDropdown = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   navigateToHome() {
     this.router.navigate(['/home']);
+  }
+
+  isAuthenticated() {
+    return this.authService.isAuthenticated;
+  }
+
+  getUsername() {
+    return this.authService.username;
+  }
+
+  logout() {
+    this.authService.logout();
+    this.showDropdown = false; // Close the dropdown after logout
+    console.log('Logout clicked');
+  }
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
   }
 }
