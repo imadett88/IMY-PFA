@@ -1,0 +1,40 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- login.component.html -->
+<div class="wave-container">
+  <!-- <img class="wave" src="../../assets/bak.png"> -->
+</div>
+<div class="container">
+  <div class="img">
+    <img src="../../assets/avtr.gif">
+  </div>
+  <div class="login-content">
+    <form [formGroup]="formLogin" (ngSubmit)="handleLogin()">
+      <img src="../../assets/wiv.gif">
+      <h2 class="title">Connecté</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="div">
+          <h5 *ngIf="!formLogin.get('username')?.value" class="label">Username</h5>
+          <input type="text" class="input" formControlName="username">
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <h5 *ngIf="!formLogin.get('password')?.value" class="label">Password</h5>
+          <input type="password" class="input" formControlName="password">
+        </div>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</div>

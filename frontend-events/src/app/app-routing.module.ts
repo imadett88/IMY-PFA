@@ -6,11 +6,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ServicesComponent } from './services/services.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path: '',  // Empty path represents the default route
-    redirectTo: '/home',  // Redirect to the home page
+    path: '',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -36,6 +37,9 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent
+  },
+  {
+    path: "login",component: LoginComponent
   }
 ];
 
