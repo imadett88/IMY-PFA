@@ -1,0 +1,10 @@
+docker build -t frontend-events:latest .
+
+
+_____________________________________
+
+docker run -p 80:80 frontend-events:latest
+docker run -p 7700:7700 backend-events:latest
+
+
+!! run xampp , Mysql

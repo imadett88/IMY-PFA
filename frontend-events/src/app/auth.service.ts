@@ -24,14 +24,16 @@ export class AuthService {
   }
 
   public logout() {
-    // Clear authentication state
     this.isAuthenticated = false;
     this.role = null;
     this.username = null;
     this.accessToken = '';
 
-    // Redirect to the login page or any desired page
     this.router.navigate(['/login']);
+  }
+
+  getUsername(): string | null {
+    return this.username ? this.username.split('@')[0] : null;
   }
 
   public clearUserData() {

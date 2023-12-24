@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   getUsername() {
-    return this.authService.username;
+    return this.authService.getUsername();
   }
 
   logout() {
