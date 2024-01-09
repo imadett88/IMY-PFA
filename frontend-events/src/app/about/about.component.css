@@ -68,14 +68,14 @@
 
 .github-icon {
   display: block;
-  font-size: 30px; /* Adjust the size as needed */
-  color: #333; /* Choose a color for the icon */
-  margin-top: 10px; /* Adjust the spacing from the text */
+  font-size: 30px;
+  color: #333;
+  margin-top: 10px;
   text-decoration: none;
 }
 
 .github-icon:hover {
-  color: #4078c0; /* Change color on hover */
+  color: #4078c0;
 }
 
 @media screen and (max-width: 600px) {

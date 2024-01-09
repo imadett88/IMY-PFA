@@ -47,7 +47,7 @@
 
 .slider-inner {
   position: absolute;
-  top: 20px; /* Adjust the top position as needed */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -70,12 +70,12 @@
 .pagination {
   position: absolute;
   top: 42%;
-  left: 97%; /* Adjust the left position as needed */
+  left: 97%;
   transform: translate(-50%, -50%);
   z-index: 6;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align to the left */
+  align-items: flex-start;
 }
 
 .pagination button {

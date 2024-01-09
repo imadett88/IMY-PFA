@@ -1,7 +1,5 @@
-<!-- home.component.html -->
 <div id="slider" class="slider">
   <div #videosContainer>
-    <!-- Your video elements here -->
     <video *ngFor="let video of videos; let i = index" autoplay loop playsinline [hidden]="selectedVideoIndex !== i"
       class="back-video">
       <source [src]="video.src" type="video/mp4">

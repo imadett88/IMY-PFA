@@ -16,7 +16,9 @@ body {
 }
 
 
-/* .container {
+/*
+v1 of container
+.container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

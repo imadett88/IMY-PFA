@@ -12,7 +12,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { ServicesComponent } from './services/services.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { AppHttpInterceptor } from './intercetors/app-http.interceptor';
+import { AppHttpInterceptor } from './interceptors/app-http.interceptor';
 
 @NgModule({
   declarations: [

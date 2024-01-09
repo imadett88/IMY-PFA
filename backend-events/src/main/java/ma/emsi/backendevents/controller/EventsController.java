@@ -1,5 +1,4 @@
 package ma.emsi.backendevents.controller;
-
 import ma.emsi.backendevents.entitie.Events;
 import ma.emsi.backendevents.exceptions.EventNotFoundException;
 import ma.emsi.backendevents.service.EventsServiceImp;
@@ -10,14 +9,12 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api/events")
 @CrossOrigin(origins = "http://localhost:4200")
 public class EventsController {
 
-    @Autowired
-    private EventsServiceImp eventsServiceImp;
+    @Autowired private EventsServiceImp eventsServiceImp;
 
     @GetMapping
     @PreAuthorize("hasAuthority('SCOPE_USER')")

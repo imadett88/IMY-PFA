@@ -26,17 +26,16 @@ export class HomeComponent {
 
 
   ngOnInit(): void {
-    // Add the 'no-scroll' class to the body element when the component is initialized
     this.renderer.addClass(document.body, 'no-scroll');
   }
 
   ngOnDestroy(): void {
-    // Remove the 'no-scroll' class from the body element when the component is destroyed
+
     this.renderer.removeClass(document.body, 'no-scroll');
   }
 
   onTrouverClick() {
-    this.router.navigate(['/events']); // Replace '/events' with your actual route
+    this.router.navigate(['/events']);
   }
 
 

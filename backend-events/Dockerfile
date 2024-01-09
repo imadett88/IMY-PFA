@@ -12,3 +12,6 @@ EXPOSE 7700
 
 # Specify the command to run on container startup
 CMD ["java", "-jar", "backend-events.jar"]
+
+
+
